@@ -21,8 +21,6 @@ public class PlayerLogWindows extends ResizeableWindow {
     private final LogListView logView;
     private final TabbedView tabView;
 
-    private final String logFilePath = "rusherhack/logs/player_log.txt";
-
     public PlayerLogWindows() {
         super("PlayerLog", 100, 100, 600, 200);
 
@@ -48,7 +46,7 @@ public class PlayerLogWindows extends ResizeableWindow {
     private void loadLogs() {
         logItems.clear();
 
-        File file = new File(logFilePath);
+        File file = new File(PlayerLogModule.getLogFilePath());
         if (!file.exists()) return;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {

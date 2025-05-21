@@ -25,6 +25,9 @@ public class PlayerLogModule extends ToggleableModule {
 	private final BooleanSetting logInChat = new BooleanSetting("Log in chat", true);
 	private final BooleanSetting logInFile = new BooleanSetting("Log in file", true);
 
+	// Log file path
+	private static final String logFilePath = "rusherhack/logs/player_log.txt";
+
 	public PlayerLogModule() {
 		super("PlayerLog", "Log all player encounters in a log file and display them in the chat", ModuleCategory.CLIENT);
 
@@ -32,6 +35,10 @@ public class PlayerLogModule extends ToggleableModule {
 				logInChat,
 				logInFile
 		);
+	}
+
+	public static String getLogFilePath() {
+		return logFilePath;
 	}
 
 	private final Set<UUID> playersInView = new HashSet<>();
@@ -102,7 +109,7 @@ public class PlayerLogModule extends ToggleableModule {
 	public void logToFile(String message) {
 		try {
 			// Choose .minecraft/rusherhack/logs/player_log.txt as the log file
-			File logFile = new File(Minecraft.getInstance().gameDirectory, "rusherhack/logs/player_log.txt");
+			File logFile = new File(Minecraft.getInstance().gameDirectory, logFilePath);
 
 			// Check and create the folder if it does not exist
 			if (!logFile.getParentFile().exists()) {

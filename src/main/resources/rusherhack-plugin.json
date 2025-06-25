@@ -1,5 +1,5 @@
 {
-  "Plugin-Class": "org.k4n3d4.PlayerLogPlugin",
+  "Plugin-Class": "org.k4n3d4.PlayerLog.PlayerLogPlugin",
   "Name": "${project.plugin_name}",
   "Version": "${project.plugin_version}",
   "Description": "Log all player encounters in a log file and display them in the chat",

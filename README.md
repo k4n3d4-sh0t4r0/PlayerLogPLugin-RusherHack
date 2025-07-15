@@ -31,7 +31,7 @@ The Filter NPC option work by not logging player that has a ping of 0. Unfortuna
 ![PlayerLogChat](img/PlayerLogChat.png)
 
 #### Exemple of notification
-![PlayerLogNotification](img/PlayerLognotification.png)
+![PlayerLogNotification](img/PlayerLogNotification.png)
 
 #### Windows module that show the log file
 ![PlayerLogWindow](img/PlayerLogWindows.png)

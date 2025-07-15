@@ -1,6 +1,6 @@
 # RusherHack PlayerLog Plugin
 
-Rusherhack plugin that log all player encounters in a log file and display them in the chat
+Rusherhack plugin that log all player encounters in a log file and display them in the chat (doesn't work on 2b2t for the moment)
 
 # Features
 
